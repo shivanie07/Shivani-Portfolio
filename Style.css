@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #4B0082;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+    color: #708dd1;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #708dd1;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #4B0082;
+}
+
+#hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.intro {
+    padding: 4rem 0;
+}
+
+.greeting {
+    font-size: 3rem;
+}
+
+.intro-content-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.intro-text-block {
+    flex: 1 1 55%;
+    animation: fadeInUp 1.5s ease-in-out both;
+}
+
+.intro-text-block h2 {
+    font-size: 4rem;
+    color: #4B0082;
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+    max-width: 600px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.intro-image-block {
+    flex: 1 1 35%;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out both;
+}
+
+.profile-image {
+    max-width: 300px;
+    width: 250%;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border: 2px solid #eaeaea;
+    border-radius: 12px;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    border-color: #00BFFF;
+}
+
+.project-card h3 {
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #00BFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-intro{
+    font-size:1.1rem;
+    margin: 1rem 0;
+    font-weight: 400;
+}
+
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #4B0082;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: #00BFFF;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    border-color: #4B0082;
+    box-shadow: 0 0 8px rgba(75, 0, 130, 0.3);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    
+}
+
+#contact-form button {
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #00BFFF;
+}
+
+#form-status {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #2e3a59;
+}
+
+.footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .intro-content-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    nav a {
+        padding: 10px 0;
+    }
+}
+
+/* Fade-in animation for intro section */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

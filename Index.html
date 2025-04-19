@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Shivani Jain | Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">Shivani Jain</h1>
+            <nav id="navbar">
+                <a href="#projects">Projects</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div id="hamburger">&#9776;</div>
+        </div>
+    </header>
+
+    <section class="intro" id="about">
+        <div class="container intro-content-flex">
+            <div class="intro-text-block" data-aos="fade-right">
+                <p class="greeting">Hi, I'm</p>
+                <h2>Shivani Jain</h2>
+                <p class="intro-text">
+                    I'm a Computer Science Engineering student with a growing passion for web development and a strong
+                    desire to turn ideas into interactive digital experiences. I enjoy learning by building, and every
+                    project is a new opportunity to grow, experiment, and push my skills forward.
+                </p>
+            </div>
+            <div class="intro-image-block" data-aos="fade-left">
+                <img src="Shivani.jpg" alt="Shivani Jain Profile Photo" class="profile-image" />
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section" data-aos="fade-up">
+        <h1 style="margin-top: 150px; font-weight: bold;">My Projects</h1>
+        <div class="project-container">
+            <div class="project-card" data-aos="fade-up">
+                <h3>My Portfolio Website</h3>
+                <p>A responsive personal portfolio built using HTML, CSS, and JavaScript. Features smooth scroll, and scroll-triggered animations with AOS library.</p>
+                <a href="https://yourusername.github.io/your-repo-name/" target="_blank"><i class="fab fa-github"></i> View </a>
+            </div>
+            <!-- Add more projects here -->
+        </div>
+    </section>
+
+    <section id="resume" class="section" data-aos="fade-up">
+        <h2 style="margin-top: 50px; font-weight: bold;">Resume</h2>
+        <p class="resume-intro">You can download my resume to learn more about my background, skills, and experience.</p>
+        <a href="ShivaniResume.pdf" download class="resume-btn"><i class="fas fa-download"></i> Download Resume</a>
+    </section>
+
+    <section id="contact" class="section" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <p class="contact-intro">If you'd like to collaborate, connect, or just say hi — feel free to reach out!</p>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="hidden" name="time" id="current-time" />
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="form-status"></p>
+        </form>
+    </section>
+
+    <footer class="footer">
+        © 2025 Shivani Jain
+    </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
